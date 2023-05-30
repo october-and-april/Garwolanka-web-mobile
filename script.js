@@ -99,10 +99,14 @@ mobileMenu.addEventListener("click", () => {
 function closeMenu(event) {
   if (
     !menuElements.contains(event.target) &&
-    !mobileMenu.includes(event.target)
+    !mobileMenu.contains(event.target)
   ) {
-    darkMode.classList.toggle("active");
     menuElements.style.display = "none";
     window.removeEventListener("click", closeMenu);
+    darkMode.classList.toggle("active");
+  } else if (menuElements.contains(event.target)) {
+    menuElements.style.display = "none";
+    darkMode.classList.toggle("active");
+    window.removeEventListener("click", closeMenu)
   }
 }
