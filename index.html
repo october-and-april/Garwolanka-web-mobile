@@ -16,17 +16,6 @@
       href="./assets/images/Favicon.svg"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Basen | Garwolanka</title>
-
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <main>
@@ -42,18 +31,37 @@
       </div>
       <div class="popupPrices">
         <div class="prices">
-          <img src="assets/images/CENNIKI_Garwolanka_2022_044-768x1086.jpg">
+          <img src="assets/images/CENNIKI_Garwolanka_2022_044-768x1086.jpg" />
         </div>
+      </div>
+      <div class="schoolPopup">
+        <a>
+        <b>ZAJĘCIA INDYWIDUALNE:</b> Zajęcia w grupie do 3 osób nie wymagają rezerwacji
+        toru. Instruktor uprawniony jest do prowadzenia zajęć po wykupie w kasie
+        Pływalni biletu instruktorskiego zgodnie z obowiązującym cennikiem.
+        Instruktor zobowiązany jest do zakupu biletu wejściowego zgodnie z
+        obowiązującym cennikiem. Uczestnik zajęć zobowiązany jest do zakupu
+        biletu wejściowego zgodnie z obowiązującym cennikiem Instruktor
+        wprowadza uczniów na zajęcia osobiście po załatwieniu formalności w
+        kasie Pływalni. <br /><b>ZAJĘCIA GRUPOWE:</b> Grupa liczy od 4 do 15 osób. Do
+        przeprowadzenia zajęć w grupie wymagana jest wcześniejsza rezerwacja
+        toru oraz opłata zgodnie z obowiązującym cennikiem. Uczestnik zajęć
+        zobowiązany jest zakupić bilet tzw. wejściowy zgodnie z obowiązującym
+        cennikiem. Instruktor wprowadza uczniów na zajęcia osobiście po
+        załatwieniu formalności w kasie Pływalni.</a>
+      </div>
+      <div class="popupReserv">
+          <a>Wybierasz się na basen? Sprawdź stałe rezerwacje torów.
+          </a>
       </div>
       <div class="dark-layer"></div>
       <nav class="menu-header">
-        <h1>Garwolanka</h1>
+        <h1 onclick="redirectToMain()">Garwolanka</h1>
         <ul>
-          <li id="about">O basenie</li>
-          <li id="ofer">Oferta</li>
-          <li id="school">Szkoła pływania</li>
-          <li id="reserv">Rezerwacje stałe</li>
-          <li id="news">Aktualności</li>
+          <li class="about" onclick="redirectToAboutPage()">O basenie</li>
+          <li class="school">Szkoła pływania</li>
+          <li class="reserv">Rezerwacje stałe</li>
+          <li id="news" onclick="redirectToMain()">Aktualności</li>
           <li class="prices">Cennik</li>
           <li id="contact">Kontakt</li>
         </ul>
@@ -66,17 +74,13 @@
         </div>
       </nav>
       <div class="menu-list">
-        <div class="newone">
-          <img src="assets/images/icon-menu-close.svg" />
-        </div>
         <ul>
-          <li>O basenie</li>
-          <li>Oferta</li>
-          <li>Szkoła pływania</li>
-          <li>Rezerwacje stałe</li>
-          <li>Aktualności</li>
-          <li>Cennik</li>
-          <li>Kontakt</li>
+          <li class="about" onclick="redirectToAboutPage()">O basenie</li>
+          <li class="school">Szkoła pływania</li>
+          <li class="reserv">Rezerwacje stałe</li>
+          <li onclick="redirectToMain()">Aktualności</li>
+          <li class="prices">Cennik</li>
+          <li id="contact">Kontakt</li>
         </ul>
       </div>
       <div class="container">
@@ -95,7 +99,7 @@
             sportowo-rekreacyjny. Na ponad 2400 metrów kwadratowych wśród wielu
             atrakcji każdy znajdzie coś dla siebie.
           </h4>
-          <button class="read-more-btn">Czytaj dalej</button>
+          <button class="read-more-btn about" onclick="redirectToAboutPage()">Czytaj dalej</button>
         </div>
         <div class="news-blue">
           <h2>Aktualności</h2>
@@ -127,7 +131,7 @@
           </div>
           <div class="rules">
             <h5>01</h5>
-            <h6>Szkoła pływania</h6>
+            <h6 class="school">Szkoła pływania</h6>
             <p>
               Zajęcia nauki i doskonalenia pływania dla młodzieży i dzieci od
               lat 6.
@@ -140,7 +144,7 @@
           </div>
           <div class="rules">
             <h5>02</h5>
-            <h6>Rezerwacje stałe</h6>
+            <h6 class="reserv">Rezerwacje stałe</h6>
             <p>Wybierasz się na basen? Sprawdź stałe rezerwacje torów.</p>
           </div>
         </div>
